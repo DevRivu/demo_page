@@ -1,3 +1,9 @@
+<style>
+header {
+  display: none;
+}
+</style>
+
 # Deep Decision Making and Reinforcement Learning: Final Project Submission
 
 ## Team Members  
