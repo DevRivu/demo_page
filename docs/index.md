@@ -142,10 +142,11 @@ While random exploration paths sometimes resulted in accidental paddle alignment
 <h3>Results PushT (Method 2 DINO WM)</h3>
 PushT environment demonstrate incremental improvement over Method 1, with slightly more effective action behaviors emerging during planning. As in Method 1, the greedy criteria-based planning fails to produce goal-directed behavior consistently, leading the pusher to interact ineffectively with the T-shaped object. Additionally, the absence of expert demonstrations continues to hinder the model’s ability to learn accurate physical interactions, emphasizing the need for better-informed action selection strategies and more diverse training data to improve model performance in complex physical environments.
 
-<p align="center">
-  <img src="gifs/output_final_2_failure-ezgif.com-video-to-gif-converter.gif" width="100" style="margin-right: 20px;">
-  <img src = "images/M2.png" >
+<p style="text-align: center;">
+  <img src="gifs/output_final_2_failure-ezgif.com-video-to-gif-converter.gif" width="400" style="margin-right: 20px;" />
+  <img src="images/M2.png" width="400" />
 </p>
+
 
 <h3>Results (Inducing exploration in Dreamer-V3)</h3>
 The primary reason our modified DreamerV3 model did not achieve the desired performance is the significantly reduced training duration. While the original DreamerV3 model was trained for 10^10 steps, our model was trained for only 10^5 steps, limiting its opportunity to thoroughly learn optimal policies. Additionally, introducing random trajectories as seed states for the imagination process inadvertently slowed policy convergence, as the model frequently imagined suboptimal or irrelevant scenarios. To address this, we propose masking these random-action instances during the imagination phase, ensuring the policy training focuses exclusively on trajectories derived from its learned distribution, potentially accelerating convergence and improving performance.
